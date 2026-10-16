@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sydney & Tasmania, 30 May – 6 Jun 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf0ed;--card:#fbfdfc;--ink:#12272b;--mute:#587076;--line:#cfdcd8;--pri:#1f6f78;--pri-ink:#fff;--acc:#b9812a;--hero:#0f2f33;--hero-ink:#e8f3ef;--ok:#2f7d57;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1a1d;--card:#13262a;--ink:#e6f0ed;--mute:#93aeb0;--line:#264146;--pri:#5cc0c8;--pri-ink:#082226;--acc:#e0b05a;--hero:#08181b;--hero-ink:#e6f0ed;--ok:#6fcf9f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1a1d;--card:#13262a;--ink:#e6f0ed;--mute:#93aeb0;--line:#264146;--pri:#5cc0c8;--pri-ink:#082226;--acc:#e0b05a;--hero:#08181b;--hero-ink:#e6f0ed;--ok:#6fcf9f;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Instrument Sans",system-ui,sans-serif;padding-bottom:84px;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;margin:0;line-height:1.15}
+header{background:linear-gradient(135deg,#0f3d4a,#1f6f78 55%,#b9812a);color:var(--hero-ink);padding:22px 18px 16px;position:relative;overflow:hidden}
+header svg{position:absolute;right:-30px;top:-10px;width:260px;opacity:.28}
+header h1{font-size:26px;font-weight:800;max-width:15em;position:relative}
+header p{margin:6px 0 0;color:var(--hero-ink);opacity:.8;font-size:14px;position:relative}
+main{max-width:640px;margin:0 auto;padding:14px 14px 0}
+.tab{display:none}.tab.on{display:block}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 12px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:8px 12px;font:inherit;text-align:center;min-width:64px;cursor:pointer}
+.chip b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.chip small{color:var(--mute);font-size:12px}
+.chip[aria-selected=true]{background:var(--pri);border-color:var(--pri);color:var(--pri-ink)}
+.chip[aria-selected=true] small{color:var(--pri-ink);opacity:.85}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+.day h2{font-size:24px}
+.hero{color:#fff;border:0;background:linear-gradient(135deg,var(--dc),color-mix(in srgb,var(--dc) 55%,#0b1d20));position:relative;overflow:hidden}
+.hero .big{position:absolute;right:12px;top:4px;font-size:76px;opacity:.3;line-height:1}
+.hero .sub{color:#fff;opacity:.9}
+.hero .tag{background:rgba(255,255,255,.22);color:#fff}
+.ic{flex:0 0 auto;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:22px;background:color-mix(in srgb,var(--dc) 22%,transparent)}
+.chip{border-bottom:3px solid var(--dc,var(--line))}
+.chip .e{display:block;font-size:20px;line-height:1.2}
+.chip[aria-selected=true]{background:var(--dc,var(--pri));border-color:var(--dc,var(--pri));color:#fff}
+.chip[aria-selected=true] small{color:#fff}
+.sub{color:var(--mute);font-size:14px;margin-top:2px}
+.tag{display:inline-block;background:color-mix(in srgb,var(--acc) 18%,transparent);color:var(--ink);border-radius:8px;padding:3px 9px;font-size:13px;margin:8px 6px 0 0}
+.stop{display:flex;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.stop:first-of-type{border-top:0}
+.stop .n{flex:1;min-width:0}
+.stop .n b{font-weight:600;display:block}
+.stop .n span{color:var(--mute);font-size:13px}
+.go{flex:0 0 auto;background:var(--pri);color:var(--pri-ink);text-decoration:none;font-weight:600;font-size:14px;border-radius:12px;padding:10px 14px;min-height:44px;display:inline-flex;align-items:center}
+.go.alt{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+.go:focus-visible,.chip:focus-visible,nav button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.leg{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.leg:first-of-type{border-top:0}.leg em{font-style:normal;color:var(--mute);text-align:right}
+h3{font-size:18px;margin-bottom:8px}
+.bar{height:8px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--pri)}.bar i.over{background:var(--acc)}
+.row{display:flex;justify-content:space-between;gap:8px}
+.bud{padding:10px 0;border-top:1px solid var(--line)}.bud:first-of-type{border-top:0}
+.over-t{color:var(--acc);font-weight:600}.ok-t{color:var(--ok);font-weight:600}
+label.pk{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line);min-height:44px}
+label.pk:first-of-type{border-top:0}
+label.pk input{width:22px;height:22px;accent-color:var(--pri)}
+label.pk input:checked+span{text-decoration:line-through;color:var(--mute)}
+.note{color:var(--mute);font-size:13px;margin:4px 2px 12px}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:20}
+nav button{flex:1;background:none;border:0;color:var(--mute);font:500 11.5px "Instrument Sans",sans-serif;padding:6px 2px;min-height:48px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;border-radius:10px}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-selected=true]{color:var(--pri)}
+</style>
+</head>
+<body>
+<header>
+<svg viewBox="0 0 260 200" fill="none" stroke="#9fd8d4" stroke-width="1.2" aria-hidden="true"><path d="M10 160c40-60 90-90 150-70s70 60 90 20"/><path d="M30 170c40-50 85-75 135-58s60 50 85 18"/><path d="M52 180c35-38 75-58 118-44s48 38 80 16"/><path d="M76 190c28-26 60-40 96-30s38 26 70 12"/><path d="M20 140c36-72 96-112 168-92s60 52 72 20"/></svg>
+<h1>🦘 Sydney &amp; Tasmania</h1>
+<p>📅 30 May – 6 Jun 2026 &nbsp; 👥 4 travellers<br>🚗 Hire car in Tasmania &nbsp; 🚆 Public transport in Sydney</p>
+</header>
+<main>
+<section id="t-days" class="tab on"><div class="chips" id="chips" role="tablist"></div><div id="day"></div></section>
+<section id="t-go" class="tab"></section>
+<section id="t-stay" class="tab"></section>
+<section id="t-pack" class="tab"></section>
+<section id="t-bud" class="tab"></section>
+</main>
+<nav role="tablist">
+<button data-t="days" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Itinerary</button>
+<button data-t="go" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 15l18-6-7 12-2-5z"/></svg>Transport</button>
+<button data-t="stay" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.5"/></svg>Stay</button>
+<button data-t="pack" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="12" rx="3"/><path d="M9 8V5h6v3M9 13h6"/></svg>Packing</button>
+<button data-t="bud" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M14.5 9.5c-.6-.8-1.6-1-2.5-1-1.2 0-2.2.6-2.2 1.6 0 2.2 4.8 1 4.8 3.3 0 1-1 1.7-2.4 1.7-1 0-2-.4-2.6-1.2M12 7v10"/></svg>Budget</button>
+</nav>
+<script>
+var M=function(q){return"https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(q)};
+var D=[
+{d:"30",m:"May",w:"Sat",t:"Sydney",stay:"Travelodge Hotel, Sydney",tags:["Flight 29 May 10:20pm PEN → 11:45am SYD","Public transport"],s:[
+["Brother's Café – soufflé pancakes","Brother's Cafe Sydney"],["Sydney Opera House","Sydney Opera House"],["Circular Quay","Circular Quay Sydney"],["The Rocks","The Rocks Sydney"],["Observatory Hill","Observatory Hill Sydney"],["Queen Victoria Building","Queen Victoria Building Sydney"]]},
+{d:"31",m:"May",w:"Sun",t:"Stanley",stay:"BIG4 Tassie Getaway, Stanley",tags:["Flight 7:25am SYD → 9:10am Launceston","Drive 223 km · 2h32"],s:[
+["Penguin (town)","Penguin Tasmania"],["Coles Burnie (groceries)","Coles Burnie Tasmania"],["The Nut Chair Lift","The Nut Chairlift Stanley Tasmania"],["Godfreys Beach penguin viewing platform","Godfreys Beach Penguin Viewing Platform Stanley Tasmania"]]},
+{d:"1",m:"Jun",w:"Mon",t:"Cradle Mountain",stay:"150 Brisbane Street, Apartment 3 (Launceston)",tags:["Drive 146 km · 1h56"],s:[
+["Ronny Creek (wombats)","Ronny Creek Cradle Mountain"],["Wombat Pool","Wombat Pool Cradle Mountain"],["Lake Lilla","Lake Lilla Cradle Mountain"],["Dove Lake","Dove Lake Cradle Mountain"]]},
+{d:"2",m:"Jun",w:"Tue",t:"Wineglass Bay",stay:"Orford",tags:["Flight 9:45am Launceston → 12:35pm Hobart","Drive 193 km · 2h41 + 108 km · 1h26"],s:[
+["Wineglass Bay Lookout","Wineglass Bay Lookout Freycinet"],["Honeymoon Bay","Honeymoon Bay Freycinet"]]},
+{d:"3",m:"Jun",w:"Wed",t:"Tasman Island",stay:"Seven Mile Beach",tags:["Drive 167 km · 2h39","Cruise 11:30am"],s:[
+["Tessellated Pavement","Tessellated Pavement Eaglehawk Neck"],["Blowhole","Tasman Blowhole"],["Waterfall Bay Lookout","Waterfall Bay Lookout Tasmania"],["Tasman Island cruise · Wild Ocean Tasmania (2h+ wildlife, caves & sea cliffs)","Wild Ocean Tasmania Pirates Bay"],["Hobart Rivulet Park (platypus)","Hobart Rivulet Park"]]},
+{d:"4",m:"Jun",w:"Thu",t:"Bruny Island",stay:"Seven Mile Beach",tags:["Drive 96.9 km · 1h33","Ferry A$53.20 per car"],s:[
+["Cape Bruny Lighthouse","Cape Bruny Lighthouse"],["911 Adventure Bay (white wallaby)","Adventure Bay Bruny Island"],["Truganini Lookout","Truganini Lookout Bruny Island"],["Bruny Island Honey","Bruny Island House of Whisky Honey"],["Get Shucked","Get Shucked Bruny Island"],["Hobart Rivulet Park (platypus)","Hobart Rivulet Park"]]},
+{d:"5",m:"Jun",w:"Fri",t:"Hobart",stay:"Nesuto Woolloomooloo, Sydney",tags:["Flight 2:40pm Hobart → 4:30pm Sydney"],s:[
+["Mount Wellington (optional)","Mount Wellington Tasmania"],["Richmond (optional)","Richmond Tasmania"],["Hurricane's Grill – pork ribs","Hurricane's Grill Sydney"]]},
+{d:"6",m:"Jun",w:"Sat",t:"Sydney",stay:"Flight home",tags:["Flight 8:35pm SYD → 7 Jun 8:30am Penang","Public transport"],s:[
+["Park Hyatt Sydney – sunrise","Park Hyatt Sydney"],["Bondi Beach","Bondi Beach"],["Queen Victoria Building","Queen Victoria Building Sydney"],["Watsons Bay","Watsons Bay Sydney"]]}
+];
+var $=function(i){return document.getElementById(i)};
+var C=["#2563a8","#2e7d5b","#5b4b9a","#c2512f","#0e7490","#a15c12","#b4325a","#1e3a8a"];
+var E=["🌉","🐧","🏔️","🏖️","🚤","🦘","⛰️","🛫"];
+var IC=[[/caf[eé]/i,"☕"],[/opera/i,"🎭"],[/quay/i,"⛴️"],[/the rocks/i,"🏛️"],[/observatory/i,"🔭"],[/queen victoria/i,"🛍️"],[/penguin/i,"🐧"],[/coles/i,"🛒"],[/chair/i,"🚡"],[/ronny|wombat/i,"🐾"],[/lake|dove/i,"🏞️"],[/wineglass/i,"🏖️"],[/honeymoon/i,"🏝️"],[/tessellated/i,"🪨"],[/blowhole/i,"🌊"],[/waterfall/i,"💦"],[/cruise/i,"🚤"],[/rivulet/i,"🦆"],[/lighthouse/i,"🗼"],[/wallaby|adventure/i,"🦘"],[/truganini/i,"🌄"],[/honey/i,"🍯"],[/shucked/i,"🦪"],[/wellington/i,"⛰️"],[/richmond/i,"🌉"],[/hurricane/i,"🍖"],[/hyatt/i,"🌅"],[/bondi/i,"🏄"],[/watsons/i,"⛵"]];
+function ic(n){for(var k=0;k<IC.length;k++)if(IC[k][0].test(n))return IC[k][1];return"📍"}
+function showDay(i){
+ var x=D[i];
+ [].forEach.call($("chips").children,function(c,k){c.setAttribute("aria-selected",k==i)});
+ $("day").innerHTML='<div class="card day hero" style="--dc:'+C[i]+'"><span class="big">'+E[i]+'</span><h2>'+x.t+'</h2><div class="sub">'+x.w+' '+x.d+' '+x.m+' · Stay: '+x.stay+'</div>'+x.tags.map(function(g){return'<span class="tag">'+g+'</span>'}).join("")+'</div><div class="card">'+x.s.map(function(p){return'<div class="stop" style="--dc:'+C[i]+'"><span class="ic">'+ic(p[0])+'</span><div class="n"><b>'+p[0]+'</b></div><a class="go" target="_blank" rel="noopener" href="'+M(p[1])+'">Navigate</a></div>'}).join("")+'</div>';
+}
+$("chips").innerHTML=D.map(function(x,i){return'<button class="chip" style="--dc:'+C[i]+'" role="tab" aria-selected="false" onclick="showDay('+i+')"><span class="e">'+E[i]+'</span><b>'+x.d+'</b><small>'+x.m+' · '+x.w+'</small></button>'}).join("");
+showDay(0);
+
+$("t-go").innerHTML='<div class="card"><h3>✈️ Flights</h3>'+[["29 May","Penang → Sydney","10:20pm → 11:45am"],["31 May","Sydney → Launceston","7:25am → 9:10am"],["2 Jun","Launceston → Hobart","9:45am → 12:35pm"],["5 Jun","Hobart → Sydney","2:40pm → 4:30pm"],["6 Jun","Sydney → Penang","8:35pm → 8:30am (7 Jun)"]].map(function(f){return'<div class="leg"><span><b>'+f[0]+'</b> '+f[1]+'</span><em>'+f[2]+'</em></div>'}).join("")+'</div>'+
+'<div class="card"><h3>🚗 Driving in Tasmania (hire car)</h3>'+[["31 May · Launceston → Stanley","223 km · 2h32"],["1 Jun · Stanley → Cradle Mountain","146 km · 1h56"],["2 Jun · Wineglass Bay","193 km · 2h41"],["2 Jun · Honeymoon Bay → Hobart side","108 km · 1h26"],["3 Jun · Tasman Peninsula","167 km · 2h39"],["4 Jun · Bruny Island","96.9 km · 1h33"]].map(function(f){return'<div class="leg"><span>'+f[0]+'</span><em>'+f[1]+'</em></div>'}).join("")+'<p class="note">Bruny Island ferry: AU$53.20 per car. Hire cars, total for the group: Launceston (Budget) RM 739.31 and Hobart (Bargain) RM 1,050.88.</p></div>'+
+'<div class="card"><h3>🚆 Sydney by public transport</h3><p style="margin:0">Trains, buses and ferries. Tap on and off with a contactless card or an Opal card. Ferries from Circular Quay reach Watsons Bay; Bondi is reached by train to Bondi Junction then a bus. Airport rides were by Didi and Uber (RM 81 and RM 155.84 in total for the group).</p></div>';
+
+$("t-stay").innerHTML=[["30 May","Travelodge Hotel, Sydney","Travelodge Hotel Sydney","49.12"],["31 May","BIG4 Tassie Getaway, Stanley","BIG4 Tassie Getaway Holiday Park Stanley","130.22"],["1 Jun","150 Brisbane Street, Apartment 3, Launceston","150 Brisbane Street Launceston Tasmania","142.99"],["2 Jun","Orford","Orford Tasmania","144.44"],["3–4 Jun","Seven Mile Beach (2 nights)","Seven Mile Beach Tasmania","557.95"],["5 Jun","Nesuto Woolloomooloo, Sydney","Nesuto Woolloomooloo Sydney","176.04"]].map(function(h){return'<div class="card" style="border-left:5px solid var(--acc)"><div class="row"><h3>🛏️ '+h[0]+'</h3><b>RM '+h[3]+'</b></div><div class="sub" style="margin:-4px 0 10px">'+h[1]+'</div><a class="go alt" target="_blank" rel="noopener" href="'+M(h[2])+'">Navigate</a></div>'}).join("")+'<p class="note">Amounts are per person in RM. Total RM 1,200.75.</p>';
+
+var P={"🧥 Cold-weather clothing (June is winter)":["Warm layers and a fleece","Waterproof jacket","Beanie, gloves, scarf","Thermal base layer"],"🥾 Walks and wildlife":["Sturdy walking shoes","Small torch or headlamp for penguins","Red-light torch (less disturbing to wildlife)","Daypack"],"🛂 Documents and money":["Passports","Driver's licence (and international permit if needed)","Flight, hire car and cruise confirmations","Some Australian cash for small shops","National Parks Pass for Cradle Mountain"],"🔌 Tech and health":["Type I power adapter (Australia)","Power bank","eSIM or local SIM","Travel insurance","Motion-sickness tablets for the ferry and cruise"]};
+var st={};try{st=JSON.parse(localStorage.getItem("pk")||"{}")}catch(e){}
+$("t-pack").innerHTML=Object.keys(P).map(function(k){return'<div class="card"><h3>'+k+'</h3>'+P[k].map(function(it){var id="p"+it.length+it.charCodeAt(0)+it.charCodeAt(it.length-1);return'<label class="pk"><input type="checkbox" data-k="'+id+'"'+(st[id]?" checked":"")+'><span>'+it+'</span></label>'}).join("")+'</div>'}).join("");
+$("t-pack").addEventListener("change",function(e){st[e.target.dataset.k]=e.target.checked;try{localStorage.setItem("pk",JSON.stringify(st))}catch(x){}});
+
+var B=[["✈️ Flights",2000,2511.27],["🏨 Accommodation",1500,1200.75],["🍜 Food",800,273.74],["🚗 Transport",720,651.18],["🎟️ Attractions",1000,632.08],["🛍️ Shopping",250,58.73],["🧾 Misc",200,651.18]];
+var fm=function(n){return n.toLocaleString("en-AU",{minimumFractionDigits:2,maximumFractionDigits:2})};
+var tp=0,ta=0;
+var bh=B.map(function(b){tp+=b[1];ta+=b[2];var r=b[1]-b[2],pc=Math.min(100,b[2]/b[1]*100);return'<div class="bud"><div class="row"><b>'+b[0]+'</b><span>RM '+fm(b[2])+' <span class="sub">of '+fm(b[1])+'</span></span></div><div class="bar"><i class="'+(r<0?"over":"")+'" style="width:'+pc+'%"></i></div><div class="sub '+(r<0?"over-t":"ok-t")+'">'+(r<0?"Over by RM "+fm(-r):"RM "+fm(r)+" left")+'</div></div>'}).join("");
+$("t-bud").innerHTML='<div class="card"><h3>💰 Per person, RM</h3><div class="row"><span>Planned</span><b>'+fm(tp)+'</b></div><div class="row"><span>Actual</span><b>'+fm(ta)+'</b></div><div class="row"><span>Remaining</span><b class="ok-t">'+fm(tp-ta)+'</b></div></div><div class="card">'+bh+'</div><div class="card"><h3>🎟️ Activities</h3>'+[["🚌 Cradle Mountain shuttle","AU$15 · RM 43.38 pp"],["🎟️ National Parks Pass","AU$96.50 · RM 68.75 pp"],["⛴️ Bruny Island ferry","AU$53.20 per car · RM 38.75 pp"],["🚤 Tasman Island cruise","AU$165 · RM 481.21 pp"]].map(function(a){return'<div class="leg"><span>'+a[0]+'</span><em>'+a[1]+'</em></div>'}).join("")+'</div>';
+
+var tabs=document.querySelectorAll("nav button");
+[].forEach.call(tabs,function(b){b.addEventListener("click",function(){
+ [].forEach.call(tabs,function(x){x.setAttribute("aria-selected",x===b)});
+ [].forEach.call(document.querySelectorAll(".tab"),function(s){s.classList.toggle("on",s.id==="t-"+b.dataset.t)});
+ window.scrollTo(0,0);
+})});
+</script>
+</body>
+</html>
